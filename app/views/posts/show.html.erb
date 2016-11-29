@@ -1,27 +1,14 @@
 <p id="notice"><%= notice %></p>
 
-<div class="posts-wrapper row">
-  <div class="post">
-    <div class="post-head">
-      <div class="name">
-        <%= @post.user.user_name %>
-      </div>
-    </div>
-    <div class="image center-block">
-      <%= image_tag @post.image.url(:medium) %>
-    </div>
-    <p class="caption">
-      <%= @post.caption %>
-  <% if @post.user.id == current_user.id %>
-      <div class="text-center edit-links">
-  <%= link_to "Cancel", posts_path %>
-  |
-  <%= link_to "Edit Post", edit_post_path(@post) %>
-</div>
-<% else %>
-<%= link_to "Back", posts_path %>
-<% end %>
-    </p>
-
+<%= render 'post', post: @post %>
+<% if @post.user.id == current_user.id %>
+  <div class="text-center edit-links">
+    <%= link_to "Cancel", posts_path %>
+    |
+    <%= link_to "Edit Post", edit_post_path(@post) %>
   </div>
-</div>
+<% else %>
+  <div class="text-center edit-links">
+    <%= link_to "Cancel", posts_path %>
+  </div>
+<% end %>
