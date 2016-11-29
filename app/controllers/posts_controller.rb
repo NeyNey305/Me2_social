@@ -1,4 +1,5 @@
 class PostsController < ApplicationController
+  before_action :authenticate_user!
   before_action :set_post, only: [:show, :edit, :update, :destroy]
 
   # GET /posts
@@ -14,7 +15,8 @@ class PostsController < ApplicationController
 
   # GET /posts/new
   def new
-    @post = Post.new
+    @post = current_user.posts.build
+    # @post = Post.new
   end
 
   # GET /posts/1/edit
@@ -24,7 +26,8 @@ class PostsController < ApplicationController
   # POST /posts
   # POST /posts.json
   def create
-    if @post = Post.create(post_params)
+    if @post = current_user.posts.build(post_params)
+
       flash.now[:success] = "Your post has been created!"
       redirect_to posts_path
     else
