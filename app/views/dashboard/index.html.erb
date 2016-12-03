@@ -1,0 +1,36 @@
+<h1>My Dashboard</h1>
+
+<div id="quote">
+  QUOTE
+</div>
+<div id="dash_layout">
+
+
+  <div id="inbox">
+    <%= link_to 'INBOX' %>
+  </div>
+
+  <div id="journal">
+    <%= link_to 'MY JOURNAL', entries_path %>
+  </div>
+
+  <div id="haven">
+    <%= link_to 'HAVEN', posts_path %>
+  </div>
+
+  <div id="settings">
+    <%= link_to 'SETTINGS' %>
+  </div>
+
+  <div id="logout">
+    <%= link_to 'LOGOUT', destroy_user_session_path, method: :delete %>
+  </div>
+
+</div>
+
+<div id="sos_layout" >
+  <div id="sos">
+    <%= link_to 'SOS' %>
+  </div>
+
+</div>

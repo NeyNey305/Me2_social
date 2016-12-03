@@ -1,0 +1,42 @@
+<h1>WELCOME TO #Me2</h1>
+
+<h1>ABOUT #Me2 - JOURNAL & HAVEN</h1>
+
+<br />
+
+<h1>ABOUT GMD, JULIE MANSFIELD, MGWB</h1>
+
+<br />
+
+<h1>HOW CAN YOU HELP? </h1>
+
+<br />
+
+<h1>RESOURCES</h1>
+<%= form_for(@location, remote: true) do |f| %>
+
+<%= f.label :street %>:
+<%= f.text_field :street, id: 'street' %>
+
+<%= f.label :city %>:
+<%= f.text_field :city, id: 'city' %>
+
+<%= f.label :state %>:
+<%= f.text_field :state, id: 'state' %>
+
+<%= f.label :zip_code %>:
+<%= f.text_field :zip_code, id: 'zip_code' %>
+<%= f.submit 'create location', id: "create_location" %>
+<% end %>
+
+<div class="map_container">
+
+  <div id="map"></div>
+</div>
+<br />
+
+<h1>CONTACT</h1>
+
+<footer>
+  contact, privacy policy, bottom nav
+</footer>

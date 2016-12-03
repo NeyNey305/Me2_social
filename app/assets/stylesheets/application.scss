@@ -15,6 +15,8 @@
  */
 
 
+
+////////////////////////// STYLING FOR NAVBAR ////////////////////////////////////
  body {
    background-color: #fafafa;
    font-family: proxima-nova, 'Helvetica Neue', Arial, Helvetica, sans-serif;
@@ -39,6 +41,7 @@
    margin: 0 auto;
  }
 
+////////////////////////// STYLING FOR POSTS ///////////////////////////////
  .posts-wrapper {
    padding-top: 40px;
    margin: 0 auto;
@@ -67,6 +70,7 @@
    }
  }
 
+///////////////////////// STYLING FOR IMAGE UPLOAD FORM ///////////////////////
  .image {
    border-bottom: 1px solid #eeefef;
    border-top: 1px solid #eeefef;
@@ -92,3 +96,91 @@
    margin-top: 20px;
    margin-bottom: 40px;
  }
+
+ html {
+  height: 100%;
+}
+///////////////////// REGISTRATION BACKGROUND ///////////////////
+.registration-bg {
+  padding-top: 4em;
+  height: 100%;
+  background: linear-gradient(to right, red , yellow);
+  -moz-background-size: cover;
+  -webkit-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+////////////////////// LOGIN FORM ///////////////////////////////
+.log-in{
+  margin-left: auto;
+  margin-right: auto;
+  text-align:center;
+  border: none;
+}
+
+.panel {
+  border-radius: 8px;
+}
+
+.panel-heading{
+  h1 {
+    text-align: center;
+  }
+}
+//////////////////// NAVBAR /////////////////////////////
+.navbar {
+  margin-bottom: 0px;
+}
+
+.alert {
+  margin-bottom: 0px;
+}
+
+////////////////// LOGIN BACKGROUND///////////////////
+.login-bg {
+  padding-top: 4em;
+  height: 100%;
+  background: linear-gradient(to right, pink , purple);
+  -moz-background-size: cover;
+  -webkit-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+/////////////////// POSTS FORM //////////////////////////
+#image-preview {
+  margin: 0px auto;
+  width: 640px;
+}
+
+#post_image {
+  padding: 1em;
+  margin: 0px auto;
+}
+
+//////////////////////// POSTS PAGINATOR ////////////////////////
+#paginator {
+  color: #4090DB;
+  height: 120px;
+  width: 120px;
+  margin: 60px auto 40px;
+  position: relative;
+  display: table;
+  border: 2px solid #4090DB;
+  border-radius: 50%;
+  :hover {
+    border: 1px solid #2D6DA8;
+    border-radius: 50%;
+  }
+}
+
+#load_more {
+  display: table-cell;
+  font-size: 12px;
+  padding: 0px 9px;
+  vertical-align: middle;
+  text-decoration: none;
+  a :hover {
+    color: #2D6DA8;
+  }
+}

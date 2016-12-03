@@ -20,14 +20,17 @@
           <%= link_to "New Post", new_post_path %>
         </li>
         <li>
+          <%= link_to "Dashboard", dashboard_index_path %>
+        </li>
+        <li>
           <%= link_to "Logout", destroy_user_session_path, method: :delete %>
         </li>
         <% else %>
         <li>
-          <%= link_to "Login", new_user_session_path %>
+          <%= link_to "My Journey", new_user_session_path %>
         </li>
         <li>
-          <%= link_to "Register", new_user_registration_path %>
+          <%= link_to "Start My Journey", new_user_registration_path %>
         </li>
         <% end %>
       </ul>

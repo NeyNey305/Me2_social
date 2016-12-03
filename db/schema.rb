@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161129201647) do
+ActiveRecord::Schema.define(version: 20161203004423) do
 
   create_table "comments", force: :cascade do |t|
     t.integer  "user_id"
@@ -20,6 +20,27 @@ ActiveRecord::Schema.define(version: 20161129201647) do
     t.datetime "updated_at", null: false
     t.index ["post_id"], name: "index_comments_on_post_id"
     t.index ["user_id"], name: "index_comments_on_user_id"
+  end
+
+  create_table "entries", force: :cascade do |t|
+    t.string   "title"
+    t.text     "body"
+    t.integer  "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_entries_on_user_id"
+  end
+
+  create_table "locations", force: :cascade do |t|
+    t.string   "street"
+    t.string   "city"
+    t.string   "state"
+    t.integer  "zip_code"
+    t.float    "longitude"
+    t.float    "latitude"
+    t.datetime "created_at",          null: false
+    t.datetime "updated_at",          null: false
+    t.string   "full_street_address"
   end
 
   create_table "posts", force: :cascade do |t|
