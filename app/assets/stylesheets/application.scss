@@ -190,6 +190,17 @@
 
 
 
+///////////////////////// COMMENTS PAGINATOR //////////////////////
+.comments {
+  .paginator {
+    margin: 0.5em;
+    .more-comments {
+      color: #A5A7AA;
+    }
+  }
+}
+
+
 
 ///////////////////////////////////resources//////////////////////////////
 
@@ -232,7 +243,7 @@
 .julie-img{
   border-radius:50%;
   width: 200px;
-  height: 200px; 
+  height: 200px;
   margin-top: -54px;
   margin-left: 42px;
 }
@@ -292,6 +303,7 @@
 }
 
 
+
 //////////////////////////////HOW/////////////////////////////
 
 .how-page{
@@ -309,6 +321,7 @@
   text-align: center;
 }
 
+
 //////////////////////////journal entry dashboard//////////////////////////////
 
 
@@ -317,3 +330,5 @@
   font-weight: bold;
   text-align: center;
 }
+
+
