@@ -1,41 +1,44 @@
-// Place all the styles related to the Registrations controller here.
+/*// Place all the styles related to the Registrations controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+*/
+.registration-bg {
+	padding-top: 4em;
+	height: 100%;
+	background: linear-gradient(to right, red , yellow);
+	/*background-image: url(https://s18.postimg.org/58lgb2pll/Untitled_design_1.png);*/
+	-moz-background-size: cover;
+	-webkit-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+.log-in{
+	margin-left: auto;
+	margin-right: auto;
+	text-align:center;
+	border: none;
+	color:black;
+    font-family: 'Open Sans Condensed', sans-serif;
+}
+
+.panel {
+	border-radius: 8px;
+}
 
 
-// .registration-bg {
-//   padding-top: 4em;
-//   height: 100%;
-//   background: linear-gradient(to right, red , yellow);
-//   -moz-background-size: cover;
-//   -webkit-background-size: cover;
-//   -o-background-size: cover;
-//   background-size: cover;
-// }
-//
-// .log-in{
-//   margin-left: auto;
-//   margin-right: auto;
-//   text-align:center;
-//   border: none;
-// }
-//
-// .panel {
-//   border-radius: 8px;
-// }
-//
-// .panel-heading{
-//   h1 {
-//     text-align: center;
-//   }
-// }
-//
-// .navbar {
-//   // margin-bottom: 0px;
-//   padding-bottom: 0px;
-// }
-//
-// .alert {
-//   // margin-bottom: 0px;
-//   padding-bottom: 0px;
-// }
+.panel-heading{
+	h1 {
+		text-align: center;
+	}
+}
+
+.navbar {
+	margin-bottom: 0px;
+	padding-bottom: 0px;
+}
+
+.alert {
+	margin-bottom: 0px;
+	padding-bottom: 0px;
+}

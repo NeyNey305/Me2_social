@@ -17,10 +17,6 @@
 
 
 ////////////////////////// STYLING FOR NAVBAR ////////////////////////////////////
- body {
-   background-color: #fafafa;
-   font-family: proxima-nova, 'Helvetica Neue', Arial, Helvetica, sans-serif;
- }
 
 
  .navbar-brand {
@@ -219,6 +215,13 @@
   }
 }
 
+///////////////////////carousel//////////////////////////////////////
+
+.carousel-journey{
+
+}
+
+
 
 ///////////////////////// COMMENTS PAGINATOR //////////////////////
 .comments {
@@ -282,10 +285,32 @@
   margin-top: -20px;
   padding-top: 2%;
   padding-bottom: 1%;
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-weight: bold;
 }
 
 .julie-art{
   padding-bottom: 4%;
+}
+
+
+//////////////////////resources///////////////////////////////////////////
+
+.resource-section{
+  background-color: #BEBEBE;
+  padding-bottom: 5%;
+  font-family: 'Open Sans Condensed', sans-serif;
+  margin-top: -50px;
+
+}
+
+.resource-title{
+  color:white;
+  text-align: center;
+  padding-top:4%;
+  padding-bottom: 4%;
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-weight: bold;
 }
 
 
@@ -298,6 +323,7 @@
   background-image: url("https://s18.postimg.org/bxeyjrdt5/Untitled_design_12.png");
   width: 100%;
   color: white;
+  margin-top: -20px;
 }
 
 
@@ -321,8 +347,23 @@
 .help{
   color:white;
   font-family: 'Open Sans Condensed', sans-serif;
+  padding-bottom: 5%;
   font-weight: bold;
   margin-top: -21px;
   padding-top: 5%;
   text-align: center;
 }
+
+
+//////////////////////////journal entry dashboard//////////////////////////////
+
+
+#journal-entry{
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-weight: bold;
+  text-align: center;
+}
+
+
+
+
