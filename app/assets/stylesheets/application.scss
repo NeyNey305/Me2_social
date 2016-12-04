@@ -17,10 +17,6 @@
 
 
 ////////////////////////// STYLING FOR NAVBAR ////////////////////////////////////
- body {
-   background-color: #fafafa;
-   font-family: proxima-nova, 'Helvetica Neue', Arial, Helvetica, sans-serif;
- }
 
 
  .navbar-brand {
@@ -245,6 +241,8 @@
   margin-top: -20px;
   padding-top: 2%;
   padding-bottom: 1%;
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-weight: bold;
 }
 
 .julie-art{
@@ -267,6 +265,8 @@
   text-align: center;
   padding-top:4%;
   padding-bottom: 4%;
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-weight: bold;
 }
 
 
@@ -302,8 +302,18 @@
 .help{
   color:white;
   font-family: 'Open Sans Condensed', sans-serif;
+  padding-bottom: 5%;
   font-weight: bold;
   margin-top: -21px;
   padding-top: 5%;
+  text-align: center;
+}
+
+//////////////////////////journal entry dashboard//////////////////////////////
+
+
+.journal-entry{
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-weight: bold;
   text-align: center;
 }
