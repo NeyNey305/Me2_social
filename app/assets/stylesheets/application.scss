@@ -218,9 +218,14 @@
 ///////////////////////carousel//////////////////////////////////////
 
 .carousel-journey{
-
+text-align: center;
+color:white;
 }
 
+.item img{
+  margin:0px;
+  width: 97.55% !important;
+}
 
 
 ///////////////////////// COMMENTS PAGINATOR //////////////////////
@@ -242,6 +247,7 @@
   padding-bottom: 5%;
   font-family: 'Open Sans Condensed', sans-serif;
   margin-top: -20px;
+  margin-left: -188px;
 
 }
 
