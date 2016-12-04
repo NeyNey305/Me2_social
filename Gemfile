@@ -25,6 +25,7 @@ gem 'hirb'
 ## USER AUTHENTICATION
 gem 'devise', '~> 4.2'
 
+gem 'jquery-turbolinks'
 
 gem 'simple_form'
 
