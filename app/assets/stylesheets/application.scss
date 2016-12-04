@@ -22,6 +22,8 @@
    font-family: proxima-nova, 'Helvetica Neue', Arial, Helvetica, sans-serif;
  }
 
+
+
  .navbar-brand {
    a {
      color: #125688;
@@ -193,6 +195,7 @@
   background-color: #8ABDD2;
   padding-bottom: 5%;
   font-family: 'Open Sans Condensed', sans-serif;
+  margin-top: -20px;
 
 }
 
@@ -214,10 +217,17 @@
   background-color: #BEBEBE;
   text-align: center;
   color:white;
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-weight: bold;
 }
 
 .julie-info{
   color:black;
+}
+
+#about-julie{
+  margin-top: -20px;
+  padding-top: 4%;
 }
 
 /////////////////////////CONTACT US///////////////////////////
