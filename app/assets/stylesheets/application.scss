@@ -22,6 +22,8 @@
    font-family: proxima-nova, 'Helvetica Neue', Arial, Helvetica, sans-serif;
  }
 
+
+
  .navbar-brand {
    a {
      color: #125688;
@@ -185,6 +187,7 @@
   }
 }
 
+<<<<<<< HEAD
 ///////////////////////// COMMENTS PAGINATOR //////////////////////
 .comments {
   .paginator {
@@ -194,3 +197,65 @@
     }
   }
 }
+=======
+
+
+///////////////////////////////////resources//////////////////////////////
+
+#resources{
+  background-color: #8ABDD2;
+  padding-bottom: 5%;
+  font-family: 'Open Sans Condensed', sans-serif;
+  margin-top: -20px;
+
+}
+
+
+#about-page{
+  color:white;
+  text-align: center;
+  padding-bottom: 4%;
+  padding-top: 4%;
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-weight: bold;
+}
+
+
+
+////////////////////////about julie/////////////////////////////////////////////////
+
+#julie{
+  background-color: #BEBEBE;
+  text-align: center;
+  color:white;
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-weight: bold;
+}
+
+.julie-info{
+  color:black;
+}
+
+#about-julie{
+  margin-top: -20px;
+  padding-top: 4%;
+}
+
+/////////////////////////CONTACT US///////////////////////////
+
+#contact{
+  padding-bottom: 10%;
+  background-image: url("https://s18.postimg.org/bxeyjrdt5/Untitled_design_12.png");
+  width: 100%;
+  color: white;
+}
+
+
+
+/////////////////////////////FOOTER//////////////////////////////
+
+.footer-content{
+  background-color: #BEBEBE;
+  padding-top: 5%;
+}
+>>>>>>> c67ef665295d84212e005b16990230c4078c2f99
