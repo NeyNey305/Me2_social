@@ -1,8 +1,5 @@
 class EntriesController < ApplicationController
-  before_action :authenticate_user!
   before_action :set_entry, only: [:show, :edit, :update, :destroy]
-  before_action :owned_entry, only: [:edit, :update, :destroy]
-
 
   # GET /entries
   # GET /entries.json
@@ -27,47 +24,45 @@ class EntriesController < ApplicationController
   # POST /entries
   # POST /entries.json
   def create
-    if @entry = Entry.new
-      @entry.save
+    @entry = Entry.new(entry_params)
 
-      respond_to do |format|
-        if @entry.save
-          format.html { redirect_to @entry, notice: 'Entry was successfully created.' }
-          format.json { render :show, status: :created, location: @entry }
-        else
-          format.html { render :new }
-          format.json { render json: @entry.errors, status: :unprocessable_entity }
-        end
+    respond_to do |format|
+      if @entry.save
+        format.html { redirect_to @entry, notice: 'Entry was successfully created.' }
+        format.json { render :show, status: :created, location: @entry }
+      else
+        format.html { render :new }
+        format.json { render json: @entry.errors, status: :unprocessable_entity }
       end
     end
+  end
 
-    # PATCH/PUT /entries/1
-    # PATCH/PUT /entries/1.json
-    def update
-      respond_to do |format|
-        if @entry.update(entry_params)
-          format.html { redirect_to @entry, notice: 'Entry was successfully updated.' }
-          format.json { render :show, status: :ok, location: @entry }
-        else
-          format.html { render :edit }
-          format.json { render json: @entry.errors, status: :unprocessable_entity }
-        end
+  # PATCH/PUT /entries/1
+  # PATCH/PUT /entries/1.json
+  def update
+    respond_to do |format|
+      if @entry.update(entry_params)
+        format.html { redirect_to @entry, notice: 'Entry was successfully updated.' }
+        format.json { render :show, status: :ok, location: @entry }
+      else
+        format.html { render :edit }
+        format.json { render json: @entry.errors, status: :unprocessable_entity }
       end
     end
+  end
 
-    # DELETE /entries/1
-    # DELETE /entries/1.json
-    def destroy
-      @entry.destroy
-      respond_to do |format|
-        format.html { redirect_to entries_url, notice: 'Entry was successfully destroyed.' }
-        format.json { head :no_content }
-      end
+  # DELETE /entries/1
+  # DELETE /entries/1.json
+  def destroy
+    @entry.destroy
+    respond_to do |format|
+      format.html { redirect_to entries_url, notice: 'Entry was successfully destroyed.' }
+      format.json { head :no_content }
     end
+  end
 
+  private
     # Use callbacks to share common setup or constraints between actions.
-
-      private
     def set_entry
       @entry = Entry.find(params[:id])
     end
@@ -76,12 +71,4 @@ class EntriesController < ApplicationController
     def entry_params
       params.require(:entry).permit(:title, :body)
     end
-
-    def owned_entry
-      unless current_user == @entry.user
-        flash[:alert] = "That entry doesn't belong to you!"
-        redirect_to root_path
-      end
-    end
-  end
 end

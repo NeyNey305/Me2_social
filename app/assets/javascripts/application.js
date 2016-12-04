@@ -17,6 +17,7 @@
 //= require_tree .
 
 
+
 $(document).on('turbolinks:load',funtion(){
 	$('.carousel').carousel();
 });
