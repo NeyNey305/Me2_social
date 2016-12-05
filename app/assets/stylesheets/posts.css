@@ -1,0 +1,76 @@
+.post{
+	background-image: url("https://s15.postimg.org/jde85woqj/Untitled_design_17.png");
+	margin-top: -4%;
+	-moz-background-size: cover;
+   -webkit-background-size: cover;
+   -o-background-size: cover;
+   background-size: cover;
+}
+
+
+.post-body{
+	text-align: center;
+	margin-bottom: 78px;
+}
+
+.image-wrap{
+	margin-top: 50px;
+}
+
+#image-preview {
+    margin: 0 auto;
+    margin-bottom: 38px;
+    padding-top: 44px;
+}
+
+.uploads{
+    color: #E91E63;
+    font-size: -webkit-xxx-large;
+    text-align: center;
+}
+/*
+#form-containers{
+	width: 20%;
+    display: inline-block;
+}*/
+
+#container-fluid{
+    width: 20%;
+    display: inline-block;
+    background-color: floralwhite;
+    margin-top: 3%;
+    box-shadow: 9px 13px 13px #E91E63;
+}
+
+/*.form-group text-center{
+    width: 43%;
+    margin-left: 67px;
+}*/
+
+input.btn.btn-default.btn-success.btn-block{
+	width: 43%;
+    margin-left: 67px;
+}
+
+a.btn-default.btn-block{
+	width: 43%;
+    margin-left: 67px;
+}
+
+input#post_caption {
+    width: 82%;
+    margin-left: 29px;
+}
+
+#post_image {
+    padding: 1em;
+    margin: 0px auto;
+    margin-left: 42px;
+}
+
+input.btn.btn-default.btn-success.btn-block{
+	width: 43%;
+    margin-left: 67px;
+    background-color: #3B5998;
+    border-style: none
+}
