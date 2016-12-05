@@ -1,26 +1,54 @@
-// Place all the styles related to the dashboard controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
-
-
+#dashboard-section{
+  background-image:url("https://s11.postimg.org/3l6e3kmlf/Untitled_design_16.png");
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
 
 .dashboard-title{
   font-family: 'Open Sans Condensed', sans-serif;
   font-weight: bold;
   text-align: center;
   padding-bottom: 4%;
+  padding-top:5%;
+  background-color: #8ABDD2;
+  margin-top: -20px;
 }
-
 
 #dash_layout {
   text-align: center;
   margin-top: 6em;
 }
 
+
+.daily-quote{
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-weight: bold;
+  text-align: center; 
+  padding-bottom: 1%;
+  padding-top: 1%;
+  font-size: -webkit-xxx-large;
+}
+
+
 #quote{
   font-family: 'Open Sans Condensed', sans-serif;
   text-align: center;
+  color:black;
+  font-weight: bold;
+  background-color:#99d3df;
+  padding-bottom: 4%;
+  margin-top: -27px;
+  padding-top: 2%;
+  color: white;
 }
+
+#quoteButton{
+  padding-bottom: 4%;
+}
+
+
 
 #inbox {
   background-color: #EBF092;
@@ -91,7 +119,7 @@
 }
 
 #sos {
-  background: linear-gradient(to right, red , yellow);
+  background-color:pink;
   height: 10em;
   width: 10em;
   border-radius: 50%;
@@ -100,6 +128,7 @@
   margin-top: 15px;
   display: inline-block;
   line-height: 10em;
+  margin-bottom: 92px;
 }
 
 #sos_layout {

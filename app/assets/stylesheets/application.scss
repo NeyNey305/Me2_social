@@ -16,8 +16,28 @@
 
 
 
-////////////////////////// STYLING FOR NAVBAR ////////////////////////////////////
+ @import "bootstrap-sprockets";
+  @import "bootstrap";
 
+ html {
+   height: 100%;
+ }
+
+ body {
+   height: 100%;
+   background-color: #fafafa;
+   font-family: proxima-nova, 'Helvetica Neue', Arial, Helvetica, sans-serif;
+ }
+
+ .alert {
+   margin-bottom: 0px;
+ }
+
+ /* ######################## NAVBAR CUSTOMISATIONS ######################### */
+
+ .navbar {
+   margin-bottom: 0px;
+ }
 
  .navbar-brand {
    a {
@@ -27,18 +47,18 @@
 
  .navbar-default {
    background-color: #fff;
-   height: 54px;
    .navbar-nav li a {
      color: #125688;
    }
  }
 
  .navbar-container {
-   width: 640px;
+   max-width: 640px;
    margin: 0 auto;
  }
 
-////////////////////////// STYLING FOR POSTS ///////////////////////////////
+ /* ######################### POST CUSTOMISATIONS ########################## */
+
  .posts-wrapper {
    padding-top: 40px;
    margin: 0 auto;
@@ -53,185 +73,304 @@
    border-radius: 3px;
    border-width: 1px;
    margin-bottom: 60px;
- }
-
- .post-head {
-   height: 64px;
-   padding: 14px 20px;
-   color: #125688;
-   font-size: 15px;
-   line-height: 18px;
-   .thumbnail {}
-   .name {
-     display: block;
+   .post-head {
+     flex-direction: row;
+     height: 64px;
+     padding-left: 24px;
+     padding-right: 24px;
+     padding-top: 24px;
+     color: #125688;
+     font-size: 15px;
+     line-height: 18px;
+     .user-name, .time-ago {
+       display: inline;
+     }
+     .user-name {
+       font-weight: 500;
+     }
+      .time-ago {
+       color: #A5A7AA;
+       float: right;
+     }
+   }
+   .image {
+     border-bottom: 1px solid #eeefef;
+     border-top: 1px solid #eeefef;
    }
  }
 
-///////////////////////// STYLING FOR IMAGE UPLOAD FORM ///////////////////////
- .image {
-   border-bottom: 1px solid #eeefef;
-   border-top: 1px solid #eeefef;
- }
+ .post-bottom {
+   .user-name, .comment-content {
+     display: inline;
+   }
+   .caption {
+     margin-bottom: 7px;
 
- .caption {
-   padding: 24px 24px;
+   }
+   .user-name {
+     font-weight: 500;
+     color: #125688;
+     font-size: 15px;
+   }
+   .user-name, .caption-content {
+     display: inline;
+
+   }
+
+   /* ####################### COMMENT #############################*/
+   #comment {
+     margin-top: 7px;
+     .user-name {
+       font-weight: 500;
+       margin-right: 0.3em;
+     }
+     .delete-comment {
+       float: right;
+       color: #515151;
+     }
+   }
+   margin-bottom: 7px;
+   padding-left: 24px;
+   padding-right: 24px;
+   padding-bottom: 10px;
    font-size: 15px;
    line-height: 18px;
-
  }
 
- .form-wrapper {
-   width: 60%;
-   margin: 20px auto;
-   background-color: #fff;
-   padding: 40px;
-   border: 1px solid #eeefef;
-   border-radius: 3px;
+ .comment_content {
+   font-size: 15px;
+   line-height: 18px;
+   border: medium none;
+   width: 100%;
+   color: #4B4F54;
  }
+
+ .comment-like-form {
+   padding-top: 24px;
+   margin-top: 13px;
+   margin-left: 24px;
+   margin-right: 24px;
+   min-height: 68px;
+   align-items: center;
+   border-top: 1px solid #EEEFEF;
+
+   flex-direction: row;
+   justify-content: center;
+ }
+
+ /* ############### DEVISE USER AUTHENTICATION ########################## */
 
  .edit-links {
    margin-top: 20px;
    margin-bottom: 40px;
  }
 
- html {
-  height: 100%;
-}
-///////////////////// REGISTRATION BACKGROUND ///////////////////
-.registration-bg {
-  padding-top: 4em;
-  height: 100%;
-  background: linear-gradient(to right, red , yellow);
-  -moz-background-size: cover;
-  -webkit-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}
-////////////////////// LOGIN FORM ///////////////////////////////
-.log-in{
-  margin-left: auto;
-  margin-right: auto;
-  text-align:center;
-  border: none;
-}
+ .registration-bg {
+   padding-top: 4em;
+   height: 100%;
+   background-image: image-url('regbackg.jpg');
+   -moz-background-size: cover;
+   -webkit-background-size: cover;
+   -o-background-size: cover;
+   background-size: cover;
+ }
 
-.panel {
-  border-radius: 8px;
-}
+ .login-bg {
+   padding-top: 4em;
+   height: 100%;
+   background-image: image-url('loginbg.jpg');
+   -moz-background-size: cover;
+   -webkit-background-size: cover;
+   -o-background-size: cover;
+   background-size: cover;
+ }
 
-.panel-heading{
-  h1 {
+ .log-in{
+   margin-left: auto;
+   margin-right: auto;
+   text-align:center;
+   border: none;
+ }
+
+ .panel {
+   border-radius: 8px;
+ }
+
+ .panel-heading{
+   h1 {
+     text-align: center;
+   }
+ }
+
+/* ################### IMAGE/POSTS PAGINATOR #######################*/
+ #image-preview {
+   margin: 0 auto;
+ }
+
+ #post_image {
+   padding: 1em;
+   margin: 0px auto;
+ }
+
+ #paginator {
+   color: #4090DB;
+   height: 120px;
+   width: 120px;
+   margin: 60px auto 40px;
+   position: relative;
+   display: table;
+   border: 2px solid #4090DB;
+   border-radius: 50%;
+   :hover {
+     border: 1px solid #2D6DA8;
+     border-radius: 50%;
+   }
+ }
+
+ #load_more {
+   display: table-cell;
+   font-size: 12px;
+   padding: 0px 9px;
+   vertical-align: middle;
+   text-decoration: none;
+   a :hover {
+     color: #2D6DA8;
+   }
+ }
+
+ .comments {
+   .paginator {
+     margin: 0.5em;
+     .more-comments {
+       color: #A5A7AA;
+     }
+   }
+ }
+
+ .comment-submit-button {
+   position: absolute;
+   left: -9999px;
+ }
+
+ /*################### PROFILE SHOW/EDIT ##########################*/
+
+ .profile-header {
+   padding: 20px 0;
+ }
+
+ .profile-image {
+   margin: 20px auto;
+   height: 152px;
+   width: 152px;
+ }
+
+ .user-name-and-follow {
+   display: inline;
+ }
+
+ .profile-user-name {
+   display: inline;
+ }
+
+ .edit-button {
+   border-color: #818488;
+   color: #818488;
+   margin-left: 20px;
+ }
+
+ .profile-bio {
+   margin-top: 20px;
+ }
+
+ #user_bio {
+   border: 1px solid gray;
+ }
+
+ #user_avatar {
+   padding: 1em;
+   margin: 0px auto;
+ }
+/*########################### LIKES ############################*/
+ .likes {
+   margin-top: 20px;
+   margin-bottom: 7px;
+ }
+
+ /*############## COLLAPSABLE MENU ON HOMEPAGE ###############*/
+
+ button.accordion {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;
     text-align: center;
-  }
-}
-//////////////////// NAVBAR /////////////////////////////
-.navbar {
-  margin-bottom: 0px;
+    font-family: 'Open Sans Condensed', sans-serif;
+    // font-weight: bold;
+    font-size: 4em;
 }
 
-.alert {
-  margin-bottom: 0px;
+button.accordion.active, button.accordion:hover {
+    background-color: #ddd;
 }
 
-////////////////// LOGIN BACKGROUND///////////////////
-.login-bg {
-  padding-top: 4em;
-  height: 100%;
-  background: linear-gradient(to right, pink , purple);
-  -moz-background-size: cover;
-  -webkit-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+div.acc-panel {
+    padding: 0 18px;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: 0.6s ease-in-out;
+    opacity: 0;
+
 }
 
-//////////////////// PROFILE FOR USERS ////////////////////////
-#user_avatar {
-  margin: 20px auto;
+
+div.acc-panel.show {
+    opacity: 1;
+    max-height: 800px; /* Whatever you like, as long as its more than the height of the content (on all screen sizes) */
 }
 
-.profile-header {
-  padding: 20px 0;
-}
-
-.profile-image {
-  margin: 20px auto;
-  height: 152px;
-  width: 152px;
-}
-
-.user-name-and-follow {
-  display: inline;
-}
-
-.profile-user-name {
-  display: inline;
-}
-
-.edit-button {
-  border-color: #818488;
-  color: #818488;
-  margin-left: 20px;
-}
-
-.profile-bio {
-  margin-top: 20px;
-}
-
-/////////////////// POSTS FORM //////////////////////////
-#image-preview {
-  margin: 0px auto;
-  width: 640px;
-}
-
-#post_image {
-  padding: 1em;
-  margin: 0px auto;
-}
-
-//////////////////////// POSTS PAGINATOR ////////////////////////
-#paginator {
-  color: #4090DB;
-  height: 120px;
-  width: 120px;
-  margin: 60px auto 40px;
+//////////////////////// MAYBE GOD WAS BUSY ///////////////////////////////
+.mgwb {
   position: relative;
-  display: table;
-  border: 2px solid #4090DB;
-  border-radius: 50%;
-  :hover {
-    border: 1px solid #2D6DA8;
-    border-radius: 50%;
-  }
+  width: 500px;
+  padding-top: 5em;
+  padding-left: 8em;
+  float: left;
 }
 
-#load_more {
-  display: table-cell;
-  font-size: 12px;
-  padding: 0px 9px;
-  vertical-align: middle;
-  text-decoration: none;
-  a :hover {
-    color: #2D6DA8;
-  }
+.mgwbbook {
+  float: right;
+  padding-right: 8em;
+  padding-bottom: 2em;
+  position: relative;
+
+
 }
 
+.buybookbtn {
+  // padding-bottom: 4em;
+  float: right;
+  margin-right: 4em;
+  border-radius: 5px;
+  background-color: yellow;
+}
 ///////////////////////carousel//////////////////////////////////////
 
 .carousel-journey{
-
+text-align: center;
+color:white;
 }
 
-
-
-///////////////////////// COMMENTS PAGINATOR //////////////////////
-.comments {
-  .paginator {
-    margin: 0.5em;
-    .more-comments {
-      color: #A5A7AA;
-    }
-  }
+.item img{
+  margin:0px;
+  width: 97.55% !important;
 }
+
 
 
 
@@ -242,30 +381,31 @@
   padding-bottom: 5%;
   font-family: 'Open Sans Condensed', sans-serif;
   margin-top: -20px;
+  margin-left: -188px;
 
 }
 
 
-#about-page{
-  color:white;
-  text-align: center;
-  padding-bottom: 4%;
-  padding-top: 4%;
-  font-family: 'Open Sans Condensed', sans-serif;
-  font-weight: bold;
-}
+// #about-page{
+//   color:white;
+//   text-align: center;
+//   padding-bottom: 4%;
+//   padding-top: 4%;
+//   font-family: 'Open Sans Condensed', sans-serif;
+//   font-weight: bold;
+// }
 
 
 
 ////////////////////////about julie/////////////////////////////////////////////////
-
-#julie{
-  background-color: #BEBEBE;
-  text-align: center;
-  color:white;
-  font-family: 'Open Sans Condensed', sans-serif;
-  font-weight: bold;
-}
+//
+// #julie{
+//   // background-color: #BEBEBE;
+//   text-align: center;
+//   color:white;
+//   font-family: 'Open Sans Condensed', sans-serif;
+//   font-weight: bold;
+// }
 
 .julie-info{
   color:black;
@@ -281,13 +421,13 @@
   margin-left: 42px;
 }
 
-#about-julie{
-  margin-top: -20px;
-  padding-top: 2%;
-  padding-bottom: 1%;
-  font-family: 'Open Sans Condensed', sans-serif;
-  font-weight: bold;
-}
+// #about-julie{
+//   margin-top: -20px;
+//   padding-top: 2%;
+//   padding-bottom: 1%;
+//   font-family: 'Open Sans Condensed', sans-serif;
+//   font-weight: bold;
+// }
 
 .julie-art{
   padding-bottom: 4%;
@@ -297,7 +437,7 @@
 //////////////////////resources///////////////////////////////////////////
 
 .resource-section{
-  background-color: #BEBEBE;
+  // background-color: #BEBEBE;
   padding-bottom: 5%;
   font-family: 'Open Sans Condensed', sans-serif;
   margin-top: -50px;
@@ -333,6 +473,7 @@
 .footer-content{
   background-color: #BEBEBE;
   padding-top: 5%;
+  margin-top: -34px;
 }
 
 
@@ -340,7 +481,7 @@
 //////////////////////////////HOW/////////////////////////////
 
 .how-page{
-  background-color:#8ABDD2;
+  // background-color:#8ABDD2;
 
 }
 
@@ -363,7 +504,3 @@
   font-weight: bold;
   text-align: center;
 }
-
-
-
-

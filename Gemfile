@@ -17,9 +17,13 @@ gem 'coffee-rails', '~> 4.2'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
-## LOCATION
+## for LIKING in POSTS (Haven)
+gem 'acts_as_votable', '~> 0.10.0'
+
+## LOCATION - for WatchDog API
 gem 'geocoder'
-## PAGINATION
+
+## PAGINATION - for Posts in Haven
 gem 'kaminari', '~> 0.16.3'
 
 gem 'hirb'
