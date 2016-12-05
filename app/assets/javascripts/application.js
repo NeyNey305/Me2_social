@@ -15,10 +15,10 @@
 //= require turbolinks
 //= require_tree .
 //= require bootstrap
-//= require bootstrap-sprockets 
+//= require bootstrap-sprockets
 
 
 
-$(document).on('turbolinks:load',funtion(){
+$(document).on('turbolinks:load',function(){
 	$('.carousel').carousel();
 });
