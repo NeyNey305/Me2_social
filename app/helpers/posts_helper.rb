@@ -1,4 +1,4 @@
-### DON'T NEED 
+### DON'T NEED
 # module PostsHelper
 #   # Our new helper method
 #   def likers_of(post)
@@ -43,10 +43,12 @@ module PostsHelper
     count_likers(votes)
   end
 
+
   def liked_post(post)
     return 'glyphicon-heart' if current_user.voted_for? post
     'glyphicon-heart-empty'
   end
+
 
   private
 

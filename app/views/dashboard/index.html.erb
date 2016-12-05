@@ -1,50 +1,37 @@
-  <section class="dash-boardpage">
-    <div class="dashboard-section">
+<section class="dash-boardpage">
+  <div class="dashboard-section">
     <h1 class="dashboard-title">My Dashboard</h1>
-  <div id="quote">
-    <div id="container">
-    <h4 class="daily-quote">Get Your Daily Quote</h4>
-      <div id="quoteContainer">
-        <p></p>
-        <p id="quoteGenius"></p>      
-      </div><!--end quoteContainer-->
-      
-      <div id="buttonContainer">
-        <a href="#" id="quoteButton">Quote Me</a>
-    </div><!--end buttonContainer-->
-  </div><!--end container-->
-  </div>
-  <div id="dash_layout">
+    <div id="quote">
+      <div id="container">
+        <h4 class="daily-quote">Get Your Daily Quote</h4>
+        <div id="quoteContainer">
+          <p></p>
+          <p id="quoteGenius"></p>
+        </div><!--end quoteContainer-->
 
+        <div id="buttonContainer">
+          <a href="#" id="quoteButton">Quote Me</a>
+        </div><!--end buttonContainer-->
+      </div><!--end container-->
+    </div>
+    <div id="dash_layout">
+      <!-- <div id="inbox">
+      <%= link_to 'INBOX' %>
+    </div> -->
 
-
-  <div id="inbox">
-    <%= link_to 'INBOX' %>
-  </div>
-
-  <div id="journal">
-    <%= link_to 'MY JOURNAL', entries_path %>
-  </div>
-
-  <div id="haven">
-    <%= link_to 'HAVEN', posts_path %>
-  </div>
-
-  <div id="settings">
-    <%= link_to 'SETTINGS' %>
-  </div>
-
-  <div id="logout">
-    <%= link_to 'LOGOUT', destroy_user_session_path, method: :delete %>
-  </div>
+    <div id="journal">
+      <%= link_to 'MY JOURNAL', entries_path %>
+    </div>
+    <div id="haven">
+      <%= link_to 'HAVEN', posts_path %>
+    </div>
+    <div id="settings">
+      <%= link_to 'SETTINGS' %>
+    </div>
+      <div id="sos">
+        <%= link_to 'SOS' %>
+      </div>
 
   </div>
-
-  <div id="sos_layout" >
-  <div id="sos">
-    <%= link_to 'SOS' %>
-  </div>
-
-  </div>
-  </div>
-  </section>
+</div>
+</section>

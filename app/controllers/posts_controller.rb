@@ -28,7 +28,7 @@ class PostsController < ApplicationController
   # POST /posts.json
   def create
     if @post = current_user.posts.build(post_params)
-       @post.save
+      @post.save
 
       flash.now[:success] = "Your post has been created!"
       redirect_to posts_path
@@ -74,6 +74,15 @@ class PostsController < ApplicationController
 
   def like
     if @post.liked_by current_user
+      respond_to do |format|
+        format.html { redirect_to :back }
+        format.js
+      end
+    end
+  end
+
+  def unlike
+    if @post.unliked_by current_user
       respond_to do |format|
         format.html { redirect_to :back }
         format.js
