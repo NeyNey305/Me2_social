@@ -410,14 +410,13 @@ div.acc-panel.show {
 .juliemarie {
   // padding-top: 1em;
 }
-.juliepic {
-  // padding-top: 5em;
-  // position: relative;
-  border-radius:50%;
-  width: 200px;
-  height: 200px;
-  margin-top: -54px;
-  margin-left: 42px;
+
+  .juliepic {
+      border-radius: 50%;
+      width: 200px;
+      height: 200px;
+      margin-top: -40px;
+      margin-left: 42px;
 }
 
 .social-media-julie {
@@ -438,6 +437,8 @@ div.acc-panel.show {
   position: relative;
   font-family: 'Quicksand', sans-serif;
   padding-right: 8em;
+  margin-top: 4%;
+  margin-left: -80px;
 }
 
 .juliebio-txt {
@@ -483,13 +484,29 @@ div.acc-panel.show {
 
 ///////////////////// HOW CAN YOU HELP //////////////////////////////
 
-.hcyh {
+  .donate {
+    float: right;
+    padding-bottom: 4em;
+    padding-right: 46%;
+    padding-top: 4%;
+}
+
+
+div.acc-panel.show {
+    opacity: 1;
+    max-height: 2000px;
+    text-align: center!important;
+}
+
+
+#how-to{
+  text-align: center;
   font-family: 'Quicksand', sans-serif;
 }
-.donate {
-  float: right;
-  padding-bottom: 4em;
-  padding-right: 4em;
+
+.btn.btn-success.btn-lg{
+  text-align: center;
+  color: blue;
 }
 ///////////////////////carousel//////////////////////////////////////
 
@@ -515,6 +532,7 @@ h3.carousel-journey {
 
 
 
+
 ///////////////////////////////////resources//////////////////////////////
 
 #resources{
@@ -525,6 +543,7 @@ h3.carousel-journey {
   margin-left: -188px;
 
 }
+
 
 
 // #about-page{
