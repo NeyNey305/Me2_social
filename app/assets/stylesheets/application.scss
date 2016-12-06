@@ -175,6 +175,10 @@
    background-size: cover;
  }
 
+#back-btn-reg {
+  width: 200px;
+  text-align: center;
+}
  .login-bg {
    padding-top: 4em;
    height: 100%;
@@ -328,23 +332,143 @@ div.acc-panel {
 
 }
 
-
 div.acc-panel.show {
     opacity: 1;
-    max-height: 800px; /* Whatever you like, as long as its more than the height of the content (on all screen sizes) */
+    max-height: 2000px; /* Whatever you like, as long as its more than the height of the content (on all screen sizes) */
 }
 
-//////////////////////// MAYBE GOD WAS BUSY ///////////////////////////////
+////////////////////////////////// ABOUT ME2 ////////////////////////////
+
+.me2text {
+  // font-family: 'Open Sans Condensed', sans-serif;
+  // text-align: justify;
+  padding-top: 2.5em;
+  padding-bottom: 2.5em;
+  padding-left: 2.5em;
+  padding-right: 2.5em;
+}
+
+.me2font {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 2em;
+}
+
+.me2font2 {
+  text-align: center;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: bold;
+  font-size: 18px;
+  color: #88bbd6;
+}
+
+.main-caption {
+  font-family: 'Quicksand', sans-serif;
+  text-align: center;
+}
+
+.main-caption-txt {
+  font-family: 'Quicksand', sans-serif;
+}
+
+//////////////////////// ABOUT GMD/JULIE/MGWB  ///////////////////////////////
+
+.gmd-block {
+  padding-top: 2em;
+}
+
+.gmd {
+  float: right;
+  margin-right: 3em;
+  padding-top: 0.5em;
+  padding-right: 8em;
+  margin-top: -50px;
+
+  // height: 50px;
+
+
+}
+
+.gmd-bio {
+  width: 800px;
+  // padding-bottom: 4em;
+  padding-left: 8em;
+}
+
+#gmd-bio-txt {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 16px;
+  line-height: 2em;
+}
+
+#julie-title {
+  font-family: 'Quicksand', sans-serif;
+  padding-left: 2.8em;
+}
+
+.juliemarie {
+  // padding-top: 1em;
+}
+.juliepic {
+  // padding-top: 5em;
+  // position: relative;
+  border-radius:50%;
+  width: 200px;
+  height: 200px;
+  margin-top: -54px;
+  margin-left: 42px;
+}
+
+.social-media-julie {
+  text-align: center;
+  padding-top: 1em;
+  font-size: 1.5em;
+  padding-right: 1.5em;
+}
+
+.juliepicdiv {
+  padding-top: 5em;
+  position: relative;
+  padding-left: 6em;
+}
+
+.juliebio {
+  float: right;
+  position: relative;
+  font-family: 'Quicksand', sans-serif;
+  padding-right: 8em;
+}
+
+.juliebio-txt {
+  font-family: 'Quicksand', sans-serif;
+  line-height: 2em;
+  font-size: 16px;
+}
+
+
 .mgwb {
   position: relative;
-  width: 500px;
-  padding-top: 5em;
+  width: 800px;
+  // padding-top: 2em;
   padding-left: 8em;
   float: left;
+  font-family: 'Quicksand', sans-serif;
+}
+
+.mgwb-txt {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 16px;
+  line-height: 2em;
+}
+
+#mgwb-title {
+  text-align: center;
 }
 
 .mgwbbook {
   float: right;
+  padding-top: 3em;
   padding-right: 8em;
   padding-bottom: 2em;
   position: relative;
@@ -352,19 +476,29 @@ div.acc-panel.show {
 
 }
 
-.buybookbtn {
-  // padding-bottom: 4em;
+.buybook {
+  text-align: center;
+  padding-top:1em;
+}
+
+///////////////////// HOW CAN YOU HELP //////////////////////////////
+
+.hcyh {
+  font-family: 'Quicksand', sans-serif;
+}
+.donate {
   float: right;
-  margin-right: 4em;
-  border-radius: 5px;
-  background-color: yellow;
+  padding-bottom: 4em;
+  padding-right: 4em;
 }
 ///////////////////////carousel//////////////////////////////////////
 
 .carousel-journey{
 text-align: center;
 color:white;
+font-family: 'Quicksand', sans-serif;
 }
+
 
 .item img{
   margin:0px;
@@ -413,13 +547,13 @@ color:white;
 }
 
 
-.julie-img{
-  border-radius:50%;
-  width: 200px;
-  height: 200px;
-  margin-top: -54px;
-  margin-left: 42px;
-}
+// .julie-img{
+//   border-radius:50%;
+//   width: 200px;
+//   height: 200px;
+//   margin-top: -54px;
+//   margin-left: 42px;
+// }
 
 // #about-julie{
 //   margin-top: -20px;

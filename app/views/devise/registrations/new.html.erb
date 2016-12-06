@@ -15,7 +15,7 @@
               <%= f.input :password, required: true, label: false, placeholder: 'Password', input_html: { class: 'input-lg' } %>
               <%= f.input :password_confirmation, required: true, label: false, placeholder: 'Confirm Password', input_html: { class: 'input-lg' } %>
               <%= f.button :submit, "Sign up", class: 'btn-lg btn-info btn-block' %>
-              <%= link_to 'Back', root_path, class: 'btn-lg btn-default btn-block' %>
+              <%= link_to 'Back', root_path, class: 'btn-lg btn-default btn-block', id:'back-btn-reg'%>
             </div>
           <% end %>
         </div>
