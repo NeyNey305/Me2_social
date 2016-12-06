@@ -175,6 +175,10 @@
    background-size: cover;
  }
 
+#back-btn-reg {
+  width: 200px;
+  text-align: center;
+}
  .login-bg {
    padding-top: 4em;
    height: 100%;
@@ -356,7 +360,7 @@ div.acc-panel.show {
   font-family: 'Quicksand', sans-serif;
   font-weight: bold;
   font-size: 18px;
-  color: blue;
+  color: #88bbd6;
 }
 
 .main-caption {
@@ -379,8 +383,12 @@ div.acc-panel.show {
   margin-right: 3em;
   padding-top: 0.5em;
   padding-right: 8em;
-}
+  margin-top: -50px;
 
+  // height: 50px;
+
+
+}
 
 .gmd-bio {
   width: 800px;
@@ -475,8 +483,13 @@ div.acc-panel.show {
 
 ///////////////////// HOW CAN YOU HELP //////////////////////////////
 
+.hcyh {
+  font-family: 'Quicksand', sans-serif;
+}
 .donate {
   float: right;
+  padding-bottom: 4em;
+  padding-right: 4em;
 }
 ///////////////////////carousel//////////////////////////////////////
 
