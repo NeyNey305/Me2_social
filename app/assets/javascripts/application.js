@@ -19,7 +19,7 @@
 
 
 
-$(document).on('turbolinks:load',funtion(){
+$(document).on('turbolinks:load',function(){
 	$('.carousel').carousel();
 });
 
