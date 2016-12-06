@@ -19,11 +19,15 @@ $(function () {
     var geocoder = new google.maps.Geocoder();
     geocoder.geocode({address: formData}, function(results, status) {
     var latitude = results[0].geometry.location.lat();
+    var maxlat = (latitude + 0.04);
     var longitude = results[0].geometry.location.lng();
-
+    var maxlng = (longitude + 0.04);
     //Keep this code to test address response function
     // console.log(results[0]);
-    $.ajax('http://services.familywatchdog.us/rest/json.asp?key=YOUR-KEY-HERE&type=searchbylatlong&minlat=' + latitude + '&maxlat=' + latitude + '&minlong=' + longitude + '&maxlong=' + latitude,
+
+    console.log('http://services.familywatchdog.us/rest/json.asp?key='+ WATCH_DOG_KEY +'&type=searchbylatlong&minlat=' + latitude + '&maxlat=' + maxlat + '&minlong=' + longitude + '&maxlong=' + maxlng)
+
+    $.ajax('http://services.familywatchdog.us/rest/json.asp?key='+ WATCH_DOG_KEY +'&type=searchbylatlong&minlat=' + latitude + '&maxlat=' + maxlat + '&minlong=' + longitude + '&maxlong=' + maxlng,
       { success: function(data) {
           var offenderAddresses = [];
           for(var i = 0; i < data["offenders"].length; i++){
@@ -32,12 +36,39 @@ $(function () {
             map: map,
             // position: data["offenders"][i]
             position: {lat: parseFloat(data["offenders"][i]["latitude"]), lng: parseFloat(data["offenders"][i]["longitude"])},
-          })
+            // title:
+          });
+
+var contentString = '<div id="content">'+
+            '<div id="siteNotice">'+
+            '</div>'+
+            '<h1 id="firstHeading" class="firstHeading">' +data["offenders"][i]["latitude"] + '</h1>'+
+            '<div id="bodyContent">'+
+            '<p><b>test</b>, also referred to as <b>Ayers Rock</b>, is a large ' +
+            'sandstone rock formation in the southern part of the '+
+            'Northern Territory, central Australia. It lies 335&#160;km (208&#160;mi) '+
+            'south west of the nearest large town, Alice Springs; 450&#160;km '+
+            '(280&#160;mi) by road. Kata Tjuta and Uluru are the two major '+
+            'features of the Uluru - Kata Tjuta National Park. Uluru is '+
+            'sacred to the Pitjantjatjara and Yankunytjatjara, the '+
+            'Aboriginal people of the area. It has many springs, waterholes, '+
+            'rock caves and ancient paintings. Uluru is listed as a World '+
+            'Heritage Site.</p>'+
+            '<p>Attribution: Uluru, <a href="https://en.wikipedia.org/w/index.php?title=Uluru&oldid=297882194">'+
+            'https://en.wikipedia.org/w/index.php?title=Uluru</a> '+
+            '(last visited June 22, 2009).</p>'+
+            '</div>'+
+            '</div>';
+          var infowindow = new google.maps.InfoWindow({
+            content: contentString
+          });
+          marker.addListener("click", function() {
+            infowindow.open(map,marker);
+          });
             // Keep this code below to test functionality of result data
-            // console.log(data["offenders"][i]);
+            console.log(data["offenders"][i]);
             //Keep this below to test latitude result return
             // console.log(parseFloat(data["offenders"][i]["latitude"]));
-
           }
         }
       });

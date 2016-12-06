@@ -25,7 +25,7 @@ gem 'geocoder'
 ## PAGINATION - for Posts in Haven
 gem 'kaminari', '~> 0.16.3'
 
-gem 'hirb'
+# gem 'hirb'
 ## USER AUTHENTICATION
 gem 'devise', '~> 4.2'
 
