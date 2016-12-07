@@ -14,7 +14,7 @@ Rails.application.routes.draw do
   post '/locations' => 'welcome#create_location'
 
   resources :profiles
-  # resources :posts
+  resources :posts
   # devise_for :users
   devise_for :users, :controllers => { registrations: 'registrations' }
 
